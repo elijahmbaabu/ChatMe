@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatMe">
         <activity
+            android:name=".ChatArea"
+            android:exported="true" />
+        <activity
+            android:name=".profile"
+            android:exported="true" />
+        <activity
             android:name=".OTP"
             android:exported="true" />
         <activity

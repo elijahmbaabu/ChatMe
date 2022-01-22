@@ -20,10 +20,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Verification Code sent to your Number"
+        android:text="Verification Code will be  sent to the given number"
         android:textAlignment="center"
         android:textStyle="bold"
         android:textColor="#6e6e6e"
+        android:textSize="20sp"
         android:layout_below="@+id/logo"
         android:id="@+id/txthead"
         android:padding="20dp">
@@ -79,7 +80,7 @@
         android:background="#FF00FF"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
-        android:text="Send otp"
+        android:text="Send OTP"
         android:textColor="@color/white"
         android:textSize="16sp">
 
