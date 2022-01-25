@@ -43,40 +43,40 @@
     </androidx.cardview.widget.CardView>
 
     <EditText
+        android:id="@+id/userName"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:inputType="textCapWords"
-        android:hint="Enter Your Name"
         android:layout_centerInParent="true"
-        android:id="@+id/userName"
         android:layout_marginLeft="80dp"
         android:layout_marginRight="80dp"
-        android:textStyle="italic"
-        android:textSize="16dp">
+        android:hint="Enter Your Name"
+        android:inputType="textCapWords"
+        android:textSize="16dp"
+        android:textStyle="italic">
 
     </EditText>
 
     <Button
+        android:id="@+id/saveprofile"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_below="@id/userName"
         android:layout_centerHorizontal="true"
-        android:id="@+id/saveprofile"
-        android:textColor="@color/white"
-        android:text="Save Profile"
         android:layout_marginTop="50dp"
-        android:background="#FF00FF">
+        android:background="#FF00FF"
+        android:text="Save Profile"
+        android:textColor="@color/white">
 
     </Button>
 
     <ProgressBar
+        android:id="@+id/save_progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/saveprofile"
-        android:id="@+id/save_progress"
-        android:visibility="invisible"
-        android:layout_marginTop="30dp">
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:visibility="invisible">
 
     </ProgressBar>
 

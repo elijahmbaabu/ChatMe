@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Verification Code will be  sent to the given number"
+        android:text="Verification Code will be  sent to your phone     number"
         android:textAlignment="center"
         android:textStyle="bold"
         android:textColor="#6e6e6e"
