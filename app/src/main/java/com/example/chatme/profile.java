@@ -30,7 +30,6 @@ import com.google.firebase.storage.UploadTask;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.security.PrivateKey;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -70,7 +69,7 @@ public class profile extends AppCompatActivity {
         saveProfile = findViewById(R.id.saveprofile);
         progressBar = findViewById(R.id.save_progress);
 
-        imageView.setOnClickListener(new View.OnClickListener() {
+        imagecard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
