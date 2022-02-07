@@ -64,7 +64,7 @@ public class profile extends AppCompatActivity {
         firebaseFirestore =FirebaseFirestore.getInstance();
 
         getUsername = findViewById(R.id.userName);
-        imageView = findViewById(R.id.image);
+        imageView = findViewById(R.id.Image);
         imagecard = findViewById(R.id.userImage);
         saveProfile = findViewById(R.id.saveprofile);
         progressBar = findViewById(R.id.save_progress);
@@ -72,7 +72,7 @@ public class profile extends AppCompatActivity {
         imagecard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
+                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI);
                 startActivityForResult(intent, PICK_IMAGE);
 
             }
@@ -98,6 +98,16 @@ public class profile extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        if (requestCode==PICK_IMAGE && resultCode==RESULT_OK){
+            imagepath = data.getData();
+            imageView.setImageURI(imagepath);
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     private void sendDataForNewUser(){
@@ -175,14 +185,4 @@ public class profile extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-
-        if (requestCode==PICK_IMAGE && resultCode==RESULT_OK){
-            imagepath = data.getData();
-            imageView.setImageURI(imagepath);
-        }
-
-        super.onActivityResult(requestCode, resultCode, data);
-    }
 }
