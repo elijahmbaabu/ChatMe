@@ -2,7 +2,6 @@
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.viewpager.widget.ViewPager;
 
@@ -34,7 +33,7 @@ import com.google.android.material.tabs.TabLayout;
         chat = findViewById(R.id.chats);
         status = findViewById(R.id.Status);
         calls = findViewById(R.id.Calls);
-        viewPager = findViewById(R.id.fragContainer);
+        viewPager = findViewById(R.id.space);
 
         getToolbar = findViewById(R.id.toolbar);
         setSupportActionBar(getToolbar);
@@ -51,8 +50,7 @@ import com.google.android.material.tabs.TabLayout;
 
                 viewPager.setCurrentItem(tab.getPosition());
 
-                if (tab.getPosition()== 0 || tab.getPosition() == 1 || tab.getPosition() == 2){
-
+                if (tab.getPosition()== 0 || tab.getPosition() == 1 || tab.getPosition() == 2) {
                     pagerAdapter.notifyDataSetChanged();
                 }
             }
@@ -77,7 +75,7 @@ import com.google.android.material.tabs.TabLayout;
 
         switch (item.getItemId()){
             case R.id.profile:
-                Intent intent = new Intent(ChatArea.this, Profile.class);
+                Intent intent = new Intent(ChatArea.this, SavedProfile.class);
                 startActivity(intent);
 
             case R.id.settings:

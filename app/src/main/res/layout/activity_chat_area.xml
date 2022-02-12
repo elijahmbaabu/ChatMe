@@ -72,7 +72,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/chatinclude"
         android:layout_marginTop="0dp"
-        android:id="@+id/fragContainer">
+        android:id="@+id/space">
 
     </androidx.viewpager.widget.ViewPager>
 

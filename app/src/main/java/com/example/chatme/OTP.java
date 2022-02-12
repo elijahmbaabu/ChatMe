@@ -72,7 +72,7 @@ public class OTP extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     progressBar.setVisibility(View.INVISIBLE);
                     Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(OTP.this, profile.class));
+                    startActivity(new Intent(OTP.this, SetProfile.class));
                     finish();
                 }
                 else {

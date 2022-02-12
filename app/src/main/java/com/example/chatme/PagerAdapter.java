@@ -12,7 +12,7 @@ public class PagerAdapter extends FragmentPagerAdapter {
     public PagerAdapter(@NonNull FragmentManager fm, int behavior) {
         super(fm, behavior);
 
-        tabCount =behavior;
+        tabCount = behavior;
     }
 
     @NonNull
@@ -26,7 +26,7 @@ public class PagerAdapter extends FragmentPagerAdapter {
             case 1:
                 return new statusFragment();
 
-            case 3:
+            case 2:
                 return new callsFragment();
 
             default:

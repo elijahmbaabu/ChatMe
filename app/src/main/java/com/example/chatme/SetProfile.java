@@ -33,7 +33,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class profile extends AppCompatActivity {
+public class SetProfile extends AppCompatActivity {
 
     private CardView imagecard;
     private ImageView imageView;
@@ -92,7 +92,7 @@ public class profile extends AppCompatActivity {
                     progressBar.setVisibility(View.VISIBLE);
                     sendDataForNewUser();
                     progressBar.setVisibility(View.INVISIBLE);
-                    startActivity(new Intent(profile.this, ChatArea.class));
+                    startActivity(new Intent(SetProfile.this, ChatArea.class));
                     finish();
                 }
             }
@@ -120,14 +120,14 @@ public class profile extends AppCompatActivity {
         DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
         UserProfileDetails userProfile = new UserProfileDetails(name, firebaseAuth.getUid());
         databaseReference.setValue(userProfile);
-        Toast.makeText(getApplicationContext(), "user Profile Added successfully", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "user SavedProfile Added successfully", Toast.LENGTH_SHORT).show();
 
         sendImagetoDatabase();
 
     }
     private void sendImagetoDatabase(){
         // compress image
-        StorageReference imageref = storageReference.child("images").child(firebaseAuth.getUid()).child("Profile Picture");
+        StorageReference imageref = storageReference.child("images").child(firebaseAuth.getUid()).child("SavedProfile Picture");
         Bitmap bitmap = null;
         try {
             bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), imagepath);
